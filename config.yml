@@ -1,0 +1,20 @@
+logging:
+  level: INFO
+  loggers:
+    test.validation: DEBUG
+
+server:
+    registerDefaultExceptionMappers: false
+
+database:
+  driverClass: org.h2.Driver
+  user: sa
+  password:
+  url: jdbc:h2:mem:default
+  properties:
+    charSet: UTF-8
+    hibernate.dialect: org.hibernate.dialect.H2Dialect
+  maxWaitForConnection: 1s
+  minSize: 8
+  maxSize: 32
+  checkConnectionWhileIdle: false
