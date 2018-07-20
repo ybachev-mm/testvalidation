@@ -7,12 +7,17 @@ Small mock up app for testing
  
   * use postman for ConstraintViolationException post request  
  example:
+  ```java
   //missing name -> @NotNull and email is to long -> @Size(max=1)
+ 
   {
       "id": 6,
       "email": "too_long@email.com"
   }
-
+  // response
+Parameter email size must be between 0 and 1 (was too_long@email.com), for class test.validation.db.model.Employee
+Parameter name may not be null (was null), for class test.validation.db.model.Employee
+```
 
 How to start the TestValidation application
 ---
